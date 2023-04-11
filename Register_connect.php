@@ -1,10 +1,4 @@
 <?php
-if(empty($_POST['First_Name']))
-{
-    $msg = '<font color ="red"><b> Field for First_Name is empty!</b></font>';
-    include("Register.php");
-    exit;
-}
 
 if(empty($_POST['First_Name']))
 {
@@ -62,9 +56,9 @@ else if(empty($_POST['Password']))
     exit;
 }
 
-else if(empty($_POST['Username']))
+else if(empty($_POST['Mobile_no']))
 {
-    $msg = '<font color ="red"><b> Field for Mobile is empty!</b></font>';
+    $msg = '<font color ="red"><b> Field for Mobile_no is empty!</b></font>';
     include("Register.php");
     exit;
 }
@@ -80,7 +74,7 @@ else
 {
     define('DB_SERVER','localhost');
     define('DB_USERNAME','root');
-    define('DB_PASSWORD','1234');
+    define('DB_PASSWORD','');
     define('DB_NAME','credentials');
     
     $mysqli = @mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_NAME);
@@ -90,7 +84,9 @@ else
         exit();
     }
 
-    $query = "INSERT INTO "
+    $query = "INSERT INTO `user_details` (`ID`, `First_Name`, `Last_name`, `Sap_ID`, `Stream`, `Email`, `Gender`, `Username`, `Password`, `Mobile_no`, `DateOfBirth`, `Created_on`) VALUES (NULL, '$_POST['First_Name']',' $_POST['Last_Name']', '$_POST['Sap_ID']', '$_POST['Stream']',' $_POST['Email']',' $_POST['Gender']',' $_POST['Username']',' $_POST['Password']',' $_POST['Mobile_no']',' $_POST['DateOfBirth']', current_timestamp()) ";
+
+    $mysqli->query($query) or die("Execution  of the the SQL Query Failed");
 }
 
 ?>

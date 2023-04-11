@@ -73,7 +73,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label>Gender</label>
-                    <select type="Char" class="form-control" name="Gender" placeholder="Gender">
+                    <select type="text" class="form-control" name="Gender" placeholder="Gender">
                         <option> </option>
                         <option>Male</option>
                         <option>Female</option>
@@ -94,7 +94,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Mobile</label>
-                    <input type="int" class="form-control" name="Mobile" size="15" placeholder="Mobile Number">
+                    <input type="int" class="form-control" name="Mobile_no" size="15" placeholder="Mobile Number">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Date of Birthday</label>
