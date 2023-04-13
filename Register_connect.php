@@ -84,9 +84,10 @@ else
         exit();
     }
 
-    $query = "INSERT INTO `user_details` (`ID`, `First_Name`, `Last_name`, `Sap_ID`, `Stream`, `Email`, `Gender`, `Username`, `Password`, `Mobile_no`, `DateOfBirth`, `Created_on`) VALUES (NULL, '$_POST['First_Name']',' $_POST['Last_Name']', '$_POST['Sap_ID']', '$_POST['Stream']',' $_POST['Email']',' $_POST['Gender']',' $_POST['Username']',' $_POST['Password']',' $_POST['Mobile_no']',' $_POST['DateOfBirth']', current_timestamp()) ";
+    $query = "INSERT INTO user_details (ID, First_Name, Last_name, Sap_ID, Stream, Email, Gender, Username, Password, Mobile_no, DateOfBirth, Created_on)
+                                 VALUES (NULL, '".$_POST['First_Name']."','".$_POST['Last_Name']."', '".$_POST['Sap_ID']."', '".$_POST['Stream']."','".$_POST['Email']."','".$_POST['Gender']."','".$_POST['Username']."','". $_POST['Password']."','". $_POST['Mobile_no']."','".$_POST['DateOfBirth']."', current_timestamp()) ";
 
-    $mysqli->query($query) or die("Execution  of the the SQL Query Failed");
+    $mysqli->query($query) or die("Login Failed!, Register again");
 }
 
 ?>
