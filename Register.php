@@ -42,7 +42,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>First Name</label>
-                    <input type="varchar" class="form-control" name="First_Name" size="20" placeholder="FirstName" value="<?php if(!empty($_POST['First_Name'])) {echo $_POST['First_Name'];} ?>">
+                    <input type="varchar" class="form-control" name="First_Name" size="20" placeholder="FirstName">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Last Name</label>
